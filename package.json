@@ -1,0 +1,41 @@
+{
+	"name": "yumemiru",
+	"type": "module",
+	"version": "1.0.0",
+	"private": true,
+	"engines": {
+		"node": "20.10.0",
+		"npm": "10.2.3"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"format": "prettier --write './**/*.{md,css,scss,astro,json,js,jsx,cjs,mjs,ts,tsx,yaml,yml,html}'",
+		"lint": "eslint \"./**/*.{astro,js,jsx,cjs,mjs,ts,tsx}\"",
+		"lint:fix": "bun lint -- --fix && bun format",
+		"prisma:push": "prisma db push && prisma generate",
+		"prisma:delete": "prisma migrate reset --skip-seed",
+		"prisma:seed": "prisma db seed"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.7.0",
+		"@astrojs/cloudflare": "^10.2.6",
+		"@prisma/adapter-d1": "^5.14.0",
+		"@prisma/client": "^5.14.0",
+		"astro": "^4.9.1",
+		"prisma": "^5.14.0",
+		"typescript": "^5.4.5"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^7.2.0",
+		"@typescript-eslint/parser": "^7.2.0",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-astro": "^1.2.0",
+		"prettier": "^3.2.5",
+		"prettier-plugin-astro": "^0.14.0"
+	}
+}
